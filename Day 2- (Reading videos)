@@ -1,0 +1,15 @@
+import cv2 as cv
+
+capture=cv.videocapture('videos/dog.mp4') 
+
+while True:
+
+is True, frame=capture.read() 
+
+cv. imshow('video', frame) 
+
+if cv.waitKey(20) & oxfF=ord('d'):
+
+capture. release() 
+
+cv. destroyAllWindows() 
