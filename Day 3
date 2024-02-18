@@ -1,0 +1,30 @@
+//Rescale and Resize Images
+
+import cv2 as cv
+img=cv.imread('photos/dog.jpg') 
+cv. imshow('dog', img) 
+def rescaleFrame(frame,scale=0.75):
+
+// images, videos, live videos
+width=int(frame.shape[1]*scale) 
+height=int(frame.shape[0]*scale)
+dimensions=(width, height) 
+returncv. resize(frame, dimensions, interpolation=cv.INTER_AREA) 
+resized_image=rescaleFrame(img) 
+cv.imshow('Image',resized_image) 
+cv. waitKey(0) 
+
+
+//Rescale and resize videos
+//read video
+import cv2 as cv
+capture=cv.videocapture('videos/dog.mp4') 
+while true:
+     is True, frame=capture.read() 
+     frame_resized=rescaleFrame(frame)
+     cv.imshow('video', frame) 
+     cv.imshow('video resized'. frame_resized) 
+     if cv.waitKey(20) & 0xFF==ord('d'):
+break
+capture. release() 
+cv. destroyAllWindows() 
