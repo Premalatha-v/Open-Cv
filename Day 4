@@ -1,0 +1,18 @@
+//Rescale and Resize live videos
+
+import cv2 as cv
+def changeRes(width,height):
+
+//live video
+capture. set(3,width)
+capture. set(4,height)
+capture=cv.videocapture('videos/dog.mp4)
+while True:
+is True, frame=capture.read()
+frame_resized=rescaleFrame(frame)
+cv. imshow('video', frame) 
+cv. imshow('video resized', frame_resized) 
+if cv. waitKey(20) & 0xFF==ord('d') 
+break
+capture release () 
+cv.destroyAllWindows() 
