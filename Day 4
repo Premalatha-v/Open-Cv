@@ -1,9 +1,9 @@
-//Rescale and Resize live videos
+#Rescale and Resize live videos
 
 import cv2 as cv
 def changeRes(width,height):
 
-//live video
+#live video
 capture. set(3,width)
 capture. set(4,height)
 capture=cv.videocapture('videos/dog.mp4)
