@@ -1,11 +1,11 @@
-//Rescale and Resize Images
+# Rescale and Resize Images
 
 import cv2 as cv
 img=cv.imread('photos/dog.jpg') 
 cv. imshow('dog', img) 
 def rescaleFrame(frame,scale=0.75):
 
-// images, videos, live videos
+# images, videos, live videos
 width=int(frame.shape[1]*scale) 
 height=int(frame.shape[0]*scale)
 dimensions=(width, height) 
@@ -15,8 +15,8 @@ cv.imshow('Image',resized_image)
 cv. waitKey(0) 
 
 
-//Rescale and resize videos
-//read video
+# Rescale and resize videos
+# read video
 import cv2 as cv
 capture=cv.videocapture('videos/dog.mp4') 
 while true:
