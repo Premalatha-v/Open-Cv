@@ -1,0 +1,46 @@
+# 5 ESSENTIAL FUNCTIONS IN CV
+
+# 1.Bgr image to grayscale image
+import cv2 as cv
+img=cv.imread('photos/dog.jpg') 
+cv. imshow('Dog', img) 
+#Converting to grayscale
+gray=cv.cvtcolor(img, cv. COLOR_BGR2GRAY) 
+cv. imshow('Gray', gray) 
+cv. waitkey(0) 
+
+# 2.Blur
+import cv2 as cv
+img=cv.imread('photos/Paris.jpg') 
+cv. imshow ('Paris', img) 
+blur=cv.GaussianBlur(img,(7, 7), cv. BORDER_DEFAULT) 
+cv. imshow ('Blur', blur) 
+cv. waitkey(0) 
+
+# 3.Edge Cascade
+import cv2 as cv
+img=cv.imread('photos/Paris.jpg') 
+cv. imshow('Paris', img) 
+canny=cv.canny(blur, 125,175) 
+cv. imshow ('Canny Edges', canny) 
+
+# 4.Dilating the image
+import cv2 as cv
+img=cv.imread('photos/paris.jpg') 
+cv. imshow ('Paris',img) 
+dilated=cv.dilate(canny, (3, 3), iterations=3) 
+cv. imshow('Dilated', dilated)
+# Eroding
+eroded=cv.erode(dilated, (3, 3), iterations=3) 
+cv. imshow ('Eroded', eroded) 
+
+# 5.resize and crop
+import cv2 as cv
+img=cv.imread('photos/paris.jpg') 
+cv. imshow ('Paris', img) 
+resized=cv.resize(img, (500, 500), interpolation=cv.INTER_AREA) 
+cv. imshow ('Resized', resized) 
+# Croping
+Cropped=img[50:200, 200:400]
+cv. imshow ('Cropped', cropped) 
+
