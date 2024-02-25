@@ -1,0 +1,38 @@
+# BITWISE OPERATORS
+import cv2 as cv
+import numpy as np
+blank=np.zeros((400,400),dtpye='uint8') 
+cv. imshow ('Blank', blank) 
+rectangle=cv.rectangle(blank.copy(), (30,30), (370,370), 255,-1) 
+circle=cv.circle(blank.copy(), (200, 200), 200,255,-1) 
+cv. imshow ('Rectangle', rectangle) 
+cv. imshow ('Circle', circle) 
+
+#Bitwise AND
+bitwise_and=cv.bitwise_and(rectangle, circle) 
+cv. imshow ('Bitwise_AND', bitwise_and) 
+
+#Bitwise OR
+bitwise_or=cv.bitwise_or(rectangle, circle) 
+cv. imshow ('Bitwise_OR', bitwise_or) 
+
+#Bitwise XOR
+bitwise_xor=cv.bitwise_or(rectangle, circle) 
+cv. imshow ('Bitwise_XOR', bitwise_or) 
+
+#Bitwise NOT
+bitwise_not=cv.bitwise_not(rectangle) 
+cv. imshow ('Bitwise_NOT', bitwise_not) 
+
+#MASKING USING BITWISE OPERATORS
+import cv2 as cv
+import numpy as np
+blank=np.zeros((400,400),dtpye='uint8') 
+cv.imshow ('Blank', blank) 
+mask=cv.circle(blank,(img.shape[1]//2, img.shape[0]//2, 100,255,-1) 
+cv. imshow ('Mask', mask) 
+masked image=cv.bitwise_and(img, img, mask=mask) 
+cv. imshow (''Masked image', masked image) 
+rectangle=cv.rectangle(blank.copy(), (30,30), (370,370), 255,-1)
+weird. shape=cv.bitwise_and(circle, rectangle) 
+cv. imshow ('Weird Shape', weird shape') 
